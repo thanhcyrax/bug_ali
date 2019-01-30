@@ -1,0 +1,93 @@
+<div class="shipping-info-by-fireapps-wrap" style="display: none;">
+                        <div class="shipping-info-by-fireapps" id="shipping-info-by-fireapps-{{product.id}}"></div>
+                        <script type="text/javascript">
+                            function loadScript(url, callback){
+                                var script = document.createElement("script")
+                                script.type = "text/javascript";
+                                if (script.readyState){
+                                    script.onreadystatechange = function(){
+                                        if (script.readyState == "loaded" ||
+                                                script.readyState == "complete"){
+                                            script.onreadystatechange = null;
+                                            callback();
+                                        }
+                                    };
+                                } else {
+                                    script.onload = function(){
+                                        callback();
+                                    };
+                                }
+                                script.src = url;
+                                document.getElementsByTagName("head")[0].appendChild(script);
+                            }
+                            
+                            var shippingView = function($) {
+                                $.ajax({
+                                    url: "https://016df96d.ngrok.io/iframe/shipping.json?productId={{product.id}}&shopDomain={{shop.domain}}",
+                                    dataType: "json",
+                                    success : function(data) {
+                                        var contentHtml = $("#shipping-info-by-fireapps-{{product.id}}").append( data.html );
+                                        $('.show_ship_box').html(contentHtml);
+                                    }
+                                });
+                            }
+                            
+                            if ((typeof jQuery === "undefined") || (parseFloat(jQuery.fn.jquery) < 1.7)) {
+                                loadScript("https://016df96d.ngrok.io/libs/jquery-3.1.1.min.js", function(){
+                                    jQuery191 = jQuery.noConflict(true);
+                                    shippingView(jQuery191);
+                                });
+                            } else {
+                                shippingView(jQuery);
+                            }
+                        </script>
+                        </div>
+/* Alireviews - alireviews_products */
+
+DELETE FROM alireviews_products.products_3466231877 
+WHERE id NOT IN (1542998523973,1545516089413,1714185601093,1708110217285,1678390919237,1859729031237,1702684590149,1696256098373,1513600188485,1675886035013,1812872888389,1620767309893,1546528292933,1776412196933,1519356313669,1573929386053,1648062726213,1546524426309,1545365684293,1508792041541,1545572974661,1812996522053,1675772493893,1855939838021,1666107342917,1513433858117,1513495330885,1666081751109,1513275424837,1544886714437,1520563486789,1520481501253,1671179862085,1869856931909,1860710006853,1653358624837,1678417592389,1561434357829,1520499949637,1696167821381,1648299475013,1574689341509,1831900807237,1723237302341,1538832891973,1573987319877,1608606711877,1695600017477,1648111124549,1545343434821,1801309290565,1723259617349,1513663201349,1608415936581,1513798172741,1648827138117,1653392900165,1648906698821,1513999073349,1620565786693,1620653670469,1714122063941,1671279083589,1620519747653,1801365946437,1725784784965,1509861195845,1562317520965,1678412480581,1524065370181,1675379572805,1675483086917,1671401865285,1675533910085,1708094390341,1671477624901,1671450558533,1545212231749,1675518181445,1675410112581,1675459166277,1675497668677,1844474118213,1848349130821,1793743781957,1561315868741,1520381722693,1801334849605,1648734830661,1812924170309,1859868524613,1513817276485,1542296371269,1519090991173,1513643016261,1513701081157,1671072579653,1723223670853,1725034954821);
+
+  .arv-collection [class^=alrv-prod-rating-] .alrv-prod-rating__text {
+      display: none !important;
+  }		
+				
+<?php
+    $arr = '{"image":"/images/backend/shipping-icon/big-shipping-icon-3-6.png","contents":[{"src":"/images/backend/shipping-icon/shipping-icon-1-5.png","content":"Free shipping for orders over [money] to [location]&nbsp;"},{"src":"/images/backend/shipping-icon/shipping-icon-3-6.png","content":"Purchase more than [from_time] products to get a special discount&nbsp;"}]}';
+    $contentArr = json_decode($arr, true);
+    echo count($contentArr['contents']);
+    print_r($contentArr);
+   
+?>
+
+(
+    [image] => /images/backend/shipping-icon/big-shipping-icon-3-6.png
+    [contents] => Array
+        (
+            [0] => Array
+                (
+                    [src] => /images/backend/shipping-icon/shipping-icon-1-5.png
+                    [content] => Free shipping for orders over [money] to [location]&nbsp;
+                )
+
+            [1] => Array
+                (
+                    [src] => /images/backend/shipping-icon/shipping-icon-3-6.png
+                    [content] => Purchase more than [from_time] products to get a special discount&nbsp;
+                )
+
+        )
+
+)
+
+.alireview-add-form .alireview-input-text, .alireview-add-form .alireview-input-textarea, .alireview-add-form input, .alireview-add-form textarea {
+	color: #000 !important
+}
+
+UPDATE products 
+SET is_setting = 1 
+WHERE setting_id is not null;
+
+ALTER TABLE products 
+ADD is_setting INT NOT NULL DEFAULT 0;
+
+INSERT INTO settings VALUES (0, 0, null, null, null, 1, '', 5, 0, 0, 1, 29511276, null, null, null, null);
