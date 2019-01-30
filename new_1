@@ -1,0 +1,110 @@
+#shopify-ali-review .alireview-desc-content .alireview-post p {
+    color: #ffffff !important;
+}
+.alireview-like-wrap {
+	display: none !important;
+}
+
+#shopify-ali-review .alireview-desc-content .alireview-post p {
+    color: #ffffff !important;
+}
+
+    font-family: Raleway,sans-serif;
+
+@media (max-width: 767px) {
+  #alireview-review-widget-badge [class*=alr-icon-] {
+      font-size: 14px !important;
+  }
+  .alr-display-review-badge [class^=alrv-prod-rating-] .alrv-prod-rating__text {
+      font-size: 11px !important;
+  }
+}
+
+.alireview-add-form .alireview-file-upload-btn {
+    background: #32373d !important;
+}
+.alireview-add-form .btn-alireview-wrap button {
+    background-color: #32373d !important;
+}
+.opinew-stars-plugin-product-list {
+	display: none !important;
+}
+
+<script>
+  var s_ajaxListener = new Object();
+  s_ajaxListener.tempOpen = XMLHttpRequest.prototype.open;
+  s_ajaxListener.tempSend = XMLHttpRequest.prototype.send;
+  var dem = 0;
+  s_ajaxListener.callback = function () {
+    // this.method :the ajax method used
+    // this.url    :the url of the requested script (including query string, if any) (urlencoded) 
+    // this.data   :the data sent, if any ex: foo=bar&a=b (urlencoded)
+    var s_ali = document.getElementsByClassName("alr-display-review-badge");
+    if (document.querySelector('.alr-display-review-badge') !== null && s_ali[0].innerHTML == '') {
+      var script_ali = document.getElementsByClassName("script_ali")[0].innerHTML;
+      document.getElementsByClassName("script_ali")[0].innerHTML = '';
+    }
+    
+  }
+
+  XMLHttpRequest.prototype.open = function(a,b) {
+    if (!a) var a='';
+    if (!b) var b='';
+    s_ajaxListener.tempOpen.apply(this, arguments);
+    s_ajaxListener.method = a;  
+    s_ajaxListener.url = b;
+    if (a.toLowerCase() == 'get') {
+      s_ajaxListener.data = b.split('?');
+      s_ajaxListener.data = s_ajaxListener.data[1];
+    }
+  }
+
+  XMLHttpRequest.prototype.send = function(a,b) {
+    if (!a) var a='';
+    if (!b) var b='';
+    s_ajaxListener.tempSend.apply(this, arguments);
+    if(s_ajaxListener.method.toLowerCase() == 'post')s_ajaxListener.data = a;
+    s_ajaxListener.callback();
+  }
+</script>
+
+/* Alireviews - alireviews_products */
+
+DELETE FROM alireviews_products.products_7680983110 
+WHERE id = 1843263275078;
+
+/* Shipping - shipping */
+
+DELETE FROM shipping.products 
+WHERE id IN (777371091004,777748676668,777748873276,777749594172,777749626940,777750478908,777750511676,777750577212,777754279996,777754378300,777755787324,786536759356,797795450940,797795516476);
+
+/* Shipping - shipping */
+
+DELETE FROM shipping.products 
+WHERE shop_id = 6198657097;
+
+/* Alireviews - alireviews_products */
+
+DELETE FROM alireviews_products.products_2132869187 
+WHERE id = 1706736615491;
+
+.btn-add-alireview {
+    background-color: #242539 !important;
+}
+1g 6v = 1c
+1c 3g = 10v
+
+/* Alireviews - alireviews_products */
+
+DELETE FROM alireviews_products.products_2133983297 
+WHERE id NOT IN (715498389569,1555633963073,744224194625,1555633799233,1555633864769,731520794689,675458842689,1857642692673,1526165962817,744223604801,1554719146049,745985310785,760661540929,715497111617,1554723766337,760661606465,1555633832001,762097467457,1529494732865,1555633766465,745985409089,760491180097,1564217245761,1851633860673,762097434689,675459268673,731534426177,745985933377,731528724545,1555633635393,744222425153,744229011521,745976037441,1529446924353,760661442625,744270954561,745980624961,1381360009281,715498061889,670575525953,1484098469953,744268267585,760661475393,765855006785,1482223222849,1555633733697,715498553409,731514994753,715533779009,1555633930305,731527086145,1433426100289,760661508161,675442196545,762097991745,731523612737,715497308225,744209481793,670584766529,1549714489409,1555633569857,745946480705,1554720948289,1483222745153,762914701377,1576229568577,765854974017,1554700894273,1555633668161,760661377089,1390627651649,1487154643009,1555633897537,762097401921,715497734209,731527348289,675492954177,745986031681,675445538881,1369855131713,1461431173185,1549714653249,1555633700929,1857642627137,760661409857,675462348865,745981345857,760491245633);
+
+/* Alireviews - alireviews_products */
+
+DELETE FROM alireviews_products.products_7296090185 
+WHERE id NOT IN (1828692656201,1828732928073,1808438493257,1855345786953,1808438788169,1808438558793,1766088048713,1856912490569,1860844683337,1814511616073,1860760928329,1808438427721,1808438657097,1808438820937,1860831707209,1854788730953,1810674778185,1764754292809,1854744756297,1808468541513,1867088887881,1808438526025,1855345819721,1860059627593);
+
+/* Shipping - shipping */
+
+DELETE FROM shipping.products 
+WHERE shop_id = 11049861179;
