@@ -264,6 +264,30 @@ password: 123qwe#@!
   color: #ffffff !important;
 }
 
+.alireview-header-summary .alireview-btn-add-review {
+    left: 50px !important;
+    right: unset !important;
+}
+
+.alireview-header-summary .alireview-summary .alireview-total-review {
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+.alr-summary .alr-count-reviews .alr-sum-wrap .alr-star {
+    padding-right: 12px;
+    padding-left: 0px !important;
+}
+
+.alr-summary .alr-count-reviews .alr-count {
+    padding-right: 12px;
+    padding-left: 0px !important;
+}
+
+.alr-summary {
+    margin-right: 25px;
+    margin-left: 0px !important;
+}
 .jslghtbx-next.jslghtbx-no-img {
 	border-top: 110px solid transparent;
     border-bottom: 110px solid transparent;
